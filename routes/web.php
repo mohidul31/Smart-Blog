@@ -18,4 +18,12 @@ Route::get('/', function () {
 Route::get('/Dashboard','DashboardController@index');
 Route::get('/Login','LoginController@index');
 
+Route::get('/PostTag','PostTagController@index');
+Route::get('/PostTag/Create','PostTagController@create');
+Route::get('/PostTag/Edit/{postTag}','PostTagController@edit');
+Route::get('/PostTag/Delete/{postTag}','PostTagController@destroy');
+Route::post('/PostTag/Store','PostTagController@store');
+Route::post('/PostTag/Update/{postTag}','PostTagController@update');
+
+
 
