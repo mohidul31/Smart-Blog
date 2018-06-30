@@ -25,5 +25,12 @@ Route::get('/PostTag/Delete/{postTag}','PostTagController@destroy');
 Route::post('/PostTag/Store','PostTagController@store');
 Route::post('/PostTag/Update/{postTag}','PostTagController@update');
 
+Route::get('/PostCategory','PostCategoryController@index');
+Route::get('/PostCategory/Create','PostCategoryController@create');
+Route::get('/PostCategory/Edit/{postCategory}','PostCategoryController@edit');
+Route::get('/PostCategory/Delete/{postCategory}','PostCategoryController@destroy');
+Route::post('/PostCategory/Store','PostCategoryController@store');
+Route::post('/PostCategory/Update/{postCategory}','PostCategoryController@update');
+
 
 

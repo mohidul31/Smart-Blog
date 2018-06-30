@@ -36,14 +36,13 @@ class PostTagController extends Controller
     {
         //
     }
-
+    
     public function edit(PostTag $postTag)
     {
         $data['PostTag']=$postTag;
 
         return view('PostTag/Edit',$data);
     }
-
 
     public function update(PostTag $postTag,Request $request)
     {
@@ -57,7 +56,6 @@ class PostTagController extends Controller
         request()->session()->flash('message', 'Successfully Updated');
         return redirect('/PostTag');
     }
-
 
     public function destroy(PostTag $postTag)
     {
