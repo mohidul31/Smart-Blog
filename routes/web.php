@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/Test','Test@index');
 Route::get('/Dashboard','DashboardController@index');
 Route::get('/Login','LoginController@index');
 
