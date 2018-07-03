@@ -8,15 +8,16 @@ use Marquine\EloquentUuid\Uuid;
 class Post extends Model
 {
     use Uuid;
-    public $PostTitle;
 
     public function postCategory()
     {
-        return $this->belongsTo('\App\Models\PostCategory','post_categories_id');
+        return $this->belongsTo('\App\Models\PostCategory','post_categories_id')->withDefault();
     }
 
     public function postTag()
     {
         return $this->belongsToMany('\App\Models\PostTag','post_post_tags','post_id','post_tag_id');
     }
+
+    
 }
